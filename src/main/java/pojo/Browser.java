@@ -7,7 +7,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Browser
 {
-	public static WebDriver launchBrowser(String url)
+	public static WebDriver launchBrowser()
 	{
 		WebDriverManager.chromedriver().setup();
 		
@@ -15,7 +15,7 @@ public class Browser
 		
 		driver.manage().window().maximize();
 		
-		driver.get(url);
+		driver.get("https://www.saucedemo.com/");
 		
 		return driver;
 	}
