@@ -1,9 +1,12 @@
 package pom;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class SwagLabHomePage {
 	
@@ -11,54 +14,64 @@ public class SwagLabHomePage {
 	@FindBy (xpath="//a[text()='About']")private WebElement about;
 	@FindBy (xpath="//a[text()='Logout']")private WebElement logout;
 	@FindBy (xpath="//a[@href='./cart.html']")private WebElement cart;
-	
 	@FindBy (xpath="//select[@class='product_sort_container']")private WebElement filter; //products to be selected
-	
-	@FindBy (xpath="//button[text()='ADD TO CART']")private WebElement addToCart;
-	@FindBy (xpath="//button[text()='REMOVE']")private WebElement remove;
-	
+	@FindBy (xpath="//button[text()='Add to cart']")private List<WebElement> addToCart;
+	@FindBy (xpath="//button[text()='Remove']")private List<WebElement> remove;
 	@FindBy (xpath="//li[text()='Twitter']")private WebElement twitter;
 	@FindBy (xpath="//li[text()='Facebook']")private WebElement facebook;
 	@FindBy (xpath="//li[text()='LinkedIn']")private WebElement linkedIn;
+	@FindBy (xpath="//div[@class='inventory_item_price']")private List<WebElement> productPrice;
 	
 	public SwagLabHomePage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void menuButton()
+	public void clickOnMenuButton()
 	{
 		menu.click();
 	}
 	
-	public void aboutButton()
+	public void clickOnAboutButton()
 	{
 		about.click();
 	}
 	
-	public void logoutButton()
+	public void clickOnlogoutButton()
 	{
 		logout.click();
 	}
 	
-	public void cartButton()
+	public void clickOnCartButton()
 	{
 		cart.click();
 	}
 	
-	public void filterDropDown()
+	public void selectFilterDropDown(int index)
 	{
-		//
+		Select select = new Select(filter);
+		select.selectByIndex(index);
 	}
 	
-	public void addToCartButton()
+	public void addProductToCart(int index)
 	{
-		addToCart.click();
+		addToCart.get(index).click();
 	}
 	
-	public void removeButton()
+	public void removeProductFromCart(int index)
 	{
-		remove.click();
+		remove.get(index).click();
+	}
+	
+	public double[]  getProductPrice() {
+		double [] allProductPrice = new double [6];
+		for(int i =0; i<productPrice.size();i++)
+		{
+		String price = productPrice.get(i).getText();
+		String data =price.substring(1);
+		allProductPrice[i] =Double.parseDouble(data);
+		}
+		return  allProductPrice;
 	}
 	
 	
