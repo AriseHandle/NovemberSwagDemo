@@ -74,6 +74,18 @@ public class SwagLabHomePage {
 		return  allProductPrice;
 	}
 	
+	public int getAddtocartButtonCount()
+	{	
+		
+		return addToCart.size();	 
+	}
+	
+	public int getRemoveButtonCount()
+	{	
+		return remove.size();	 
+	}
+	
+	
 	
 
 }
