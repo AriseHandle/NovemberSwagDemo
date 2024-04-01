@@ -39,4 +39,6 @@ public class HomePageFeatureTest extends BaseTest {
 		double [] price =swagLabHomePage.getProductPrice();
 		Assert.assertTrue(price[0]>=price[1] && price[1]>=price[2] && price[2]>=price[3] && price[3]>=price[4] && price[4]>=price[5]);
 	}
+	
+	
 }

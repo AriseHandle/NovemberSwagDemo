@@ -13,8 +13,10 @@ public class Parametrization {
 	{
 		String value = null;
 		try 
-		{	
-			FileInputStream file = new FileInputStream("C:\\Users\\91877\\OneDrive\\Documents\\NovemberBatch\\SwagDemo\\src\\test\\resources\\TestData.xlsx");
+		{				
+			//FileInputStream file = new FileInputStream("C:\\Users\\91877\\OneDrive\\Documents\\NovemberBatch\\SwagDemo\\src\\test\\resources\\TestData.xlsx");
+			String filePath="../NovemberSwagDemo/src/test/resources/TestData.xlsx";
+			FileInputStream file = new FileInputStream(filePath);
 			value = WorkbookFactory.create(file).getSheet(sheetname).getRow(row).getCell(cell).getStringCellValue();
 		}
 		catch (Exception e) {
@@ -22,5 +24,7 @@ public class Parametrization {
 		}
 		return value;
 	}
+	
+	
 
 }
