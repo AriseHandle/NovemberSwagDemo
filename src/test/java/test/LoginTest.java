@@ -11,8 +11,7 @@ import utility.Parametrization;
 @Listeners (test.Listeners.class)
 public class LoginTest extends BaseTest {
 	
-	String user;
-	String pass;
+	
 	String url;
 
 	@BeforeMethod
