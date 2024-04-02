@@ -5,7 +5,7 @@
     <classes>
       <class name="test.HomePageFeatureTest">
         <methods>
-          <include name="verifyFilterFunctionalityForLowToHigh"/>
+          <include name="verifyFilterFunctionalityZToA"/>
           <include name="OpenApplication"/>
         </methods>
       </class> <!-- test.HomePageFeatureTest -->
