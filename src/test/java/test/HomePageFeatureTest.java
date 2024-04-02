@@ -1,11 +1,6 @@
 package test;
 
-import java.time.Duration;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -49,9 +44,9 @@ public class HomePageFeatureTest extends BaseTest {
 	public void verifyAddToCartButtonFunctionality() {
 		user =Parametrization.getExcelData("Creds", 1, 1);
 		pass =Parametrization.getExcelData("Creds", 2, 1);
-		loginSwagLab(driver, user, pass);
+		loginSwagLab(driver, "standard_user", "secret_sauce");
 		SwagLabHomePage swagLabHomePage =new SwagLabHomePage(driver);
-		swagLabHomePage.addProductToCart(0);;
+		swagLabHomePage.addProductToCart(0);
 		int removeCount=swagLabHomePage.getRemoveButtonCount();
 		Assert.assertEquals(removeCount, 1);
 	}
@@ -60,14 +55,10 @@ public class HomePageFeatureTest extends BaseTest {
 	public void verifyRemoveButtonFunctionality()throws InterruptedException   {
 		user =Parametrization.getExcelData("Creds", 1, 1);
 		pass =Parametrization.getExcelData("Creds", 2, 1);
-		loginSwagLab(driver, user, pass);
+		loginSwagLab(driver, "standard_user", "secret_sauce");
 		SwagLabHomePage swagLabHomePage =new SwagLabHomePage(driver);
-		swagLabHomePage.addProductToCart(0);
-		Thread.sleep(5000);
-		//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		//wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//button[text()='Remove']")));		
+		swagLabHomePage.addProductToCart(0);		
 		swagLabHomePage.removeProductFromCart(0);
-		swagLabHomePage.getAddtocartButtonCount();
 		int addToCartCount=swagLabHomePage.getAddtocartButtonCount();
 		Assert.assertEquals(addToCartCount, 6);
 	}
@@ -78,10 +69,10 @@ public class HomePageFeatureTest extends BaseTest {
 		pass =Parametrization.getExcelData("Creds", 2, 1);
 		loginSwagLab(driver, "standard_user", "secret_sauce");
 		SwagLabHomePage swagLabHomePage =new SwagLabHomePage(driver);
-		String firstProductName =swagLabHomePage.getFirstProductsName();
-		String lastProductName = swagLabHomePage.getLastProuctName();
+		String firstProductName =swagLabHomePage.getFirstProuctName();
+		String lastProductName = swagLabHomePage.getLastProductName();
 		swagLabHomePage.selectFilterDropDown(1);
-		Assert.assertEquals(swagLabHomePage.getLastProuctName(),firstProductName );
-		Assert.assertEquals(swagLabHomePage.getFirstProductsName(), lastProductName);
+		Assert.assertEquals(swagLabHomePage.getLastProductName(),firstProductName );
+		Assert.assertEquals(swagLabHomePage.getFirstProuctName(), lastProductName);
 	}
 }

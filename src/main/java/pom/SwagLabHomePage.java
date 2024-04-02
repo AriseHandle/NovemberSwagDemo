@@ -75,10 +75,20 @@ public class SwagLabHomePage {
 		return  allProductPrice;
 	}
 
+	public String getFirstProuctName() {
+		return productName.get(0).getText();
+	}
 	
-	public String getLastProuctName() {
+	public String getLastProductName() {
 		return productName.get(productName.size()-1).getText();
 	}
 		
-
+	public int getAddtocartButtonCount() {
+		return addToCart.size();
+	}
+	
+	public int getRemoveButtonCount() {
+		return remove.size();
+	}
+	
 }
