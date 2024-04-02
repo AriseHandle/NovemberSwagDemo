@@ -21,6 +21,7 @@ public class SwagLabHomePage {
 	@FindBy (xpath="//li[text()='Facebook']")private WebElement facebook;
 	@FindBy (xpath="//li[text()='LinkedIn']")private WebElement linkedIn;
 	@FindBy (xpath="//div[@class='inventory_item_price']")private List<WebElement> productPrice;
+	@FindBy (xpath="//div[@class='inventory_item_name ']")private List<WebElement> productName;
 	
 	public SwagLabHomePage(WebDriver driver)
 	{
@@ -73,19 +74,11 @@ public class SwagLabHomePage {
 		}
 		return  allProductPrice;
 	}
+
 	
-	public int getAddtocartButtonCount()
-	{	
+	public String getLastProuctName() {
+		return productName.get(productName.size()-1).getText();
+	}
 		
-		return addToCart.size();	 
-	}
-	
-	public int getRemoveButtonCount()
-	{	
-		return remove.size();	 
-	}
-	
-	
-	
 
 }

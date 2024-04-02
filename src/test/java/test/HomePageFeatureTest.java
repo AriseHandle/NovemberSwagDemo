@@ -72,5 +72,16 @@ public class HomePageFeatureTest extends BaseTest {
 		Assert.assertEquals(addToCartCount, 6);
 	}
 	
-	
+	@Test
+	public void verifyFilterFunctionalityZToA() {
+		user =Parametrization.getExcelData("Creds", 1, 1);
+		pass =Parametrization.getExcelData("Creds", 2, 1);
+		loginSwagLab(driver, "standard_user", "secret_sauce");
+		SwagLabHomePage swagLabHomePage =new SwagLabHomePage(driver);
+		String firstProductName =swagLabHomePage.getFirstProductsName();
+		String lastProductName = swagLabHomePage.getLastProuctName();
+		swagLabHomePage.selectFilterDropDown(1);
+		Assert.assertEquals(swagLabHomePage.getLastProuctName(),firstProductName );
+		Assert.assertEquals(swagLabHomePage.getFirstProductsName(), lastProductName);
+	}
 }
