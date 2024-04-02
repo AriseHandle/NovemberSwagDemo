@@ -74,10 +74,7 @@ public class SwagLabHomePage {
 		}
 		return  allProductPrice;
 	}
-	
-	public String getFirstProductsName() {
-		return productName.get(0).getText();
-	}
+
 	
 	public String getLastProuctName() {
 		return productName.get(productName.size()-1).getText();
