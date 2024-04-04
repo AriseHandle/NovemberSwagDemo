@@ -11,10 +11,9 @@ import pojo.Browser;
 import pom.SwagLabHomePage;
 import utility.Parametrization;
 
-public class socialMediaLinkTest extends BaseTest
+public class SocialMediaLinkTest extends BaseTest
 {
-	private String user;
-	private String pass;
+	
 	@BeforeMethod
 	public void OpenApplication() {
 		driver =Browser.launchBrowser();
@@ -27,15 +26,9 @@ public class socialMediaLinkTest extends BaseTest
 		loginSwagLab(driver, "standard_user", "secret_sauce");
 		SwagLabHomePage swagLabHomePage =new SwagLabHomePage(driver);
 		swagLabHomePage.clickOnTwitterButton();
-		Set<String> handles=driver.getWindowHandles();
-		Iterator<String> iterrate =handles.iterator();
-		while(iterrate.hasNext())
-		{
-			String handle =iterrate.next();
-			driver.switchTo().window(handle);			
-		}
+		switchToWindow("Sauce Labs (@saucelabs) / X");
 		String url = driver.getCurrentUrl();
-		Assert.assertEquals("https://twitter.com/saucelabs", url);		
+		Assert.assertEquals(url, "https://twitter.com/saucelabs");		
 	}
 	
 	@Test
@@ -46,15 +39,9 @@ public class socialMediaLinkTest extends BaseTest
 		loginSwagLab(driver, "standard_user", "secret_sauce");
 		SwagLabHomePage swagLabHomePage =new SwagLabHomePage(driver);
 		swagLabHomePage.clickOnFacebookButton();
-		Set<String> handles=driver.getWindowHandles();
-		Iterator<String> iterrate =handles.iterator();
-		while(iterrate.hasNext())
-		{
-			String handle =iterrate.next();
-			driver.switchTo().window(handle);			
-		}
+		switchToWindow("Sauce Labs | San Francisco CA | Facebook");
 		String url = driver.getCurrentUrl();
-		Assert.assertEquals("https://www.facebook.com/saucelabs", url);		
+		Assert.assertEquals(url,"https://www.facebook.com/saucelabs");		
 	}
 	
 	@Test
@@ -65,14 +52,8 @@ public class socialMediaLinkTest extends BaseTest
 		loginSwagLab(driver, "standard_user", "secret_sauce");
 		SwagLabHomePage swagLabHomePage =new SwagLabHomePage(driver);
 		swagLabHomePage.clickOnLinkedINButton();
-		Set<String> handles=driver.getWindowHandles();
-		Iterator<String> iterrate =handles.iterator();
-		while(iterrate.hasNext())
-		{
-			String handle =iterrate.next();
-			driver.switchTo().window(handle);			
-		}
+		switchToWindow("Sauce Labs | LinkedIn");
 		String url = driver.getCurrentUrl();
-		Assert.assertEquals("https://www.linkedin.com/company/sauce-labs/", url);		
+		Assert.assertEquals(url,"https://www.linkedin.com/company/sauce-labs/");		
 	}
 }

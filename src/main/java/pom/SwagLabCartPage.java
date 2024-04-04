@@ -31,4 +31,24 @@ public class SwagLabCartPage
 		checkoutButton.click();		
 	}
 	
+	public int getProductInCart() {
+		return	productInCart.size();
+	}
+	
+	public String getProductNamePresentInCart(int index) {
+		return cartProductName.get(index).getText();
+	}
+	
+	public String getProductDescriptionPresentInCart(int index) {
+		return cartProductDescription.get(index).getText();
+	}
+	
+	public double getProductPricePresentInCart(int index) {
+		
+		String price = cartProductPrice.get(index).getText();
+		String data =price.substring(1);
+		return Double.parseDouble(data);
+		
+	}
+	
 }
