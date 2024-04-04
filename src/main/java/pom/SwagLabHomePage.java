@@ -13,7 +13,7 @@ public class SwagLabHomePage {
 	@FindBy (xpath="//button[text()='Open Menu']")private WebElement menu;
 	@FindBy (xpath="//a[text()='About']")private WebElement about;
 	@FindBy (xpath="//a[text()='Logout']")private WebElement logout;
-	@FindBy (xpath="//a[@href='./cart.html']")private WebElement cart;
+	@FindBy (xpath="//a[@class='shopping_cart_link']")private WebElement cart;
 	@FindBy (xpath="//select[@class='product_sort_container']")private WebElement filter; //products to be selected
 	@FindBy (xpath="//button[text()='Add to cart']")private List<WebElement> addToCart;
 	@FindBy (xpath="//button[text()='Remove']")private List<WebElement> remove;
@@ -22,6 +22,7 @@ public class SwagLabHomePage {
 	@FindBy (xpath="//a[text()='LinkedIn']")private WebElement linkedIn;
 	@FindBy (xpath="//div[@class='inventory_item_price']")private List<WebElement> productPrice;
 	@FindBy (xpath="//div[@class='inventory_item_name ']")private List<WebElement> productName;
+	@FindBy (xpath="//div[@class='inventory_item_desc']")private List<WebElement> productDescription;
 	
 	public SwagLabHomePage(WebDriver driver)
 	{
@@ -102,6 +103,14 @@ public class SwagLabHomePage {
 	public void clickOnLinkedINButton()
 	{
 		linkedIn.click();
+	}
+	
+	public String getProductName(int index) {
+		return productName.get(index).getText();
+	}
+	
+	public String getProductDescription(int index) {
+		return productDescription.get(index).getText();
 	}
 	
 	
