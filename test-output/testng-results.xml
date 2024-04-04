@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-      </class> <!-- test.HomePageFeatureTest -->
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-04-03T10:36:29 IST" name="Default suite" finished-at="2024-04-03T10:37:31 IST" duration-ms="62077">
+    <groups>
+    </groups>
+    <test started-at="2024-04-03T10:36:29 IST" name="Default test" finished-at="2024-04-03T10:37:31 IST" duration-ms="62077">
+      <class name="test.MenuTest">
+        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:test.MenuTest@25ce9dc4]" started-at="2024-04-03T10:36:29 IST" name="OpenApplication" finished-at="2024-04-03T10:36:40 IST" duration-ms="10167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenApplication -->
+        <test-method signature="verifyAbout()[pri:0, instance:test.MenuTest@25ce9dc4]" started-at="2024-04-03T10:36:40 IST" name="verifyAbout" finished-at="2024-04-03T10:36:55 IST" duration-ms="15740" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAbout -->
+        <test-method is-config="true" signature="OpenApplication()[pri:0, instance:test.MenuTest@25ce9dc4]" started-at="2024-04-03T10:36:55 IST" name="OpenApplication" finished-at="2024-04-03T10:37:28 IST" duration-ms="32893" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenApplication -->
+        <test-method signature="verifyLogout()[pri:0, instance:test.MenuTest@25ce9dc4]" started-at="2024-04-03T10:37:28 IST" name="verifyLogout" finished-at="2024-04-03T10:37:31 IST" duration-ms="3060" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogout -->
+      </class> <!-- test.MenuTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
