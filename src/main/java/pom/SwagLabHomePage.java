@@ -17,9 +17,9 @@ public class SwagLabHomePage {
 	@FindBy (xpath="//select[@class='product_sort_container']")private WebElement filter; //products to be selected
 	@FindBy (xpath="//button[text()='Add to cart']")private List<WebElement> addToCart;
 	@FindBy (xpath="//button[text()='Remove']")private List<WebElement> remove;
-	@FindBy (xpath="//li[text()='Twitter']")private WebElement twitter;
-	@FindBy (xpath="//li[text()='Facebook']")private WebElement facebook;
-	@FindBy (xpath="//li[text()='LinkedIn']")private WebElement linkedIn;
+	@FindBy (xpath="//a[text()='Twitter']")private WebElement twitter;
+	@FindBy (xpath="//a[text()='Facebook']")private WebElement facebook;
+	@FindBy (xpath="//a[text()='LinkedIn']")private WebElement linkedIn;
 	@FindBy (xpath="//div[@class='inventory_item_price']")private List<WebElement> productPrice;
 	@FindBy (xpath="//div[@class='inventory_item_name ']")private List<WebElement> productName;
 	
@@ -90,5 +90,22 @@ public class SwagLabHomePage {
 	public int getRemoveButtonCount() {
 		return remove.size();
 	}
+	
+	public void clickOnTwitterButton()
+	{
+		twitter.click();
+	}
+	public void clickOnFacebookButton()
+	{
+		facebook.click();
+	}
+	public void clickOnLinkedINButton()
+	{
+		linkedIn.click();
+	}
+	
+	
+	
+	
 	
 }
