@@ -15,7 +15,7 @@ public class SwagLabCartPage
 	@FindBy(xpath="//div[@data-test='inventory-item']//div//a//div")private List<WebElement> cartProductName;
 	@FindBy(xpath="//div[@data-test='inventory-item-price']")private List<WebElement> cartProductPrice; 
 	@FindBy(xpath="//div[@data-test='inventory-item-desc']")private List<WebElement> cartProductDescription;
-	
+	@FindBy (xpath="//button[text()='Remove']")private List<WebElement> remove;
 	public SwagLabCartPage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
@@ -50,5 +50,15 @@ public class SwagLabCartPage
 		return Double.parseDouble(data);
 		
 	}
+	public int[] removeProductToCart1(int index)
+	{
+		int [] removeProduct = new int [4];
+		for(int i =0; i<removeProduct.length;i++)
+		{
+			remove.get(index).click();
+		}
+		return removeProduct;
+	}
 	
-}
+	}
+
