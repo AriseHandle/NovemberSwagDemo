@@ -5,8 +5,8 @@
     <classes>
       <class name="test.CartTest">
         <methods>
-          <include name="addSingleProductToCart"/>
           <include name="OpenApplication"/>
+          <include name="addMultipleProductToCart"/>
         </methods>
       </class> <!-- test.CartTest -->
     </classes>

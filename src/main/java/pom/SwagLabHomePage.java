@@ -1,5 +1,6 @@
 package pom;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -23,7 +24,7 @@ public class SwagLabHomePage {
 	@FindBy (xpath="//div[@class='inventory_item_price']")private List<WebElement> productPrice;
 	@FindBy (xpath="//div[@class='inventory_item_name ']")private List<WebElement> productName;
 	@FindBy (xpath="//div[@class='inventory_item_desc']")private List<WebElement> productDescription;
-	
+
 	public SwagLabHomePage(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
@@ -113,8 +114,15 @@ public class SwagLabHomePage {
 		return productDescription.get(index).getText();
 	}
 	
-	
-	
+	public int[] addProductToCart1(int index)
+	{
+		int [] product = new int [6];
+		for(int i =0; i<product.length;i++)
+		{
+			addToCart.get(index).click();
+		}
+		return product;
+	}
 	
 	
 }
