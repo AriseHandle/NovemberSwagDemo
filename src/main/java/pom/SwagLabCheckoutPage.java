@@ -26,11 +26,11 @@ public class SwagLabCheckoutPage
 	}
 	public void enterLastname(String lname)
 	{
-		firstName.sendKeys(lname);
+		lastName.sendKeys(lname);
 	}
 	public void enterPostalCode(String pinCode)
 	{
-		firstName.sendKeys(pinCode);
+		postalCode.sendKeys(pinCode);
 	}
 	public void clickOnCancelButton()
 	{

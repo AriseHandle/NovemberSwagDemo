@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.CartTest">
+      <class name="test.OvervriewPageTest">
         <methods>
           <include name="OpenApplication"/>
-          <include name="addMultipleProductToCart"/>
+          <include name="overViewPagePriceCalculationTest"/>
         </methods>
-      </class> <!-- test.CartTest -->
+      </class> <!-- test.OvervriewPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

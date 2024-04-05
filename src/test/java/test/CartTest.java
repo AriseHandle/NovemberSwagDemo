@@ -2,6 +2,7 @@ package test;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import pojo.Browser;
@@ -10,9 +11,11 @@ import pom.SwagLabHomePage;
 
 public class CartTest extends BaseTest {
 	
+	@Parameters({"browser"})
+	
 	@BeforeMethod
-	public void OpenApplication() {
-		driver =Browser.launchBrowser();
+	public void OpenApplication(String browser) {
+		driver =Browser.launchBrowser(browser);
 	}
 	
 	@Test
