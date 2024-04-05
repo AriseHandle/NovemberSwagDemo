@@ -5,6 +5,7 @@ import java.util.Set;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import pojo.Browser;
@@ -14,10 +15,13 @@ import utility.Parametrization;
 public class SocialMediaLinkTest extends BaseTest
 {
 	
+	@Parameters({"browser"})
+	
 	@BeforeMethod
-	public void OpenApplication() {
-		driver =Browser.launchBrowser();
+	public void OpenApplication(String browser) {
+		driver =Browser.launchBrowser(browser);
 	}
+	
 	@Test
 	public void clickOnTwitterButton()
 	{

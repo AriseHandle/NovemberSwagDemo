@@ -2,16 +2,27 @@ package pojo;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Browser
 {
-	public static WebDriver launchBrowser()
+	public static WebDriver launchBrowser(String browser)
 	{
-		WebDriverManager.chromedriver().setup();
-		
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = null;;
+		if(browser.equalsIgnoreCase("Chrome"))
+		{
+			WebDriverManager.chromedriver().setup();
+			
+			 driver = new ChromeDriver();
+		}
+		else if(browser.equalsIgnoreCase("Edge"))
+		{
+			WebDriverManager.edgedriver().setup();
+			
+			 driver = new EdgeDriver();
+		}
 		
 		driver.manage().window().maximize();
 		
@@ -19,6 +30,8 @@ public class Browser
 		
 		return driver;
 	}
+
+	
 
 
 }

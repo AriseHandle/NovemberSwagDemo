@@ -27,7 +27,7 @@ public class SwagLabCheckoutOverview {
 		
 	}
 	
-	public String[] verifyProductName(int index){
+	public String[] getProductName(int index){
 		String[] allProductName=new String[index];
 		for (int i=0;i<productName.size();i++) {
 			String product=productName.get(i).getText();
@@ -35,7 +35,7 @@ public class SwagLabCheckoutOverview {
 		return allProductName;
 	}
 	
-	public String[] verifyProductDescription(int index) {
+	public String[] getProductDescription(int index) {
 		String[] allProducDescription=new String[index];
 		for (int i=0;i<productDescription.size();i++) {
 			String product=productDescription.get(i).getText();
@@ -43,32 +43,30 @@ public class SwagLabCheckoutOverview {
 		return allProducDescription;
 	}
 	
-    public double[] verifyProductPrice() {
-    	double [] allProductPrice = new double[6];
-		for(int i =0; i<productPrice.size();i++)
-		{
-		String price = productPrice.get(i).getText();
+    public double getProductPrice(int index) {
+    	
+		String price = productPrice.get(index).getText();
 		String data =price.substring(1);
-	 allProductPrice[i] =Double.parseDouble(data);
-		}
-		return allProductPrice;
+	    return Double.parseDouble(data);
+		
+		
 	}
 	
-    public double verifyItemTotalPrice() {
+    public double getItemTotalPrice() {
 		String price = itemTotalPrice.getText();
 		String data =price.substring(13);
 		double totalPrice = Double.parseDouble(data);
 		return totalPrice;
 	}
 	
-	public double verifytotalTaxPrice() {
+	public double getTotalTaxPrice() {
 		String price = totalTaxPrice.getText();
 		String data =price.substring(6);
 		double taxPrice = Double.parseDouble(data);
 		return taxPrice;
 	}
 	
-	public double verifyitemTotalPriceWithTax() {
+	public double getItemTotalPriceWithTax() {
 		String price = itemTotalPriceWithTax.getText();
 		String data =price.substring(8);
 		double productPriceWithTax = Double.parseDouble(data);
