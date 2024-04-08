@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="6" failed="2" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-05T20:00:32 IST" name="Suite" finished-at="2024-04-05T20:01:10 IST" duration-ms="37200">
+  <suite started-at="2024-04-08T18:00:07 IST" name="Suite" finished-at="2024-04-08T18:00:52 IST" duration-ms="44809">
     <groups>
     </groups>
-    <test started-at="2024-04-05T20:00:32 IST" name="ChromeTest" finished-at="2024-04-05T20:00:44 IST" duration-ms="11986">
-      <class name="test.LoginTest">
-        <test-method is-config="true" signature="OpenApplication(java.lang.String)[pri:0, instance:test.LoginTest@55a147cc]" started-at="2024-04-05T20:00:33 IST" name="OpenApplication" finished-at="2024-04-05T20:00:36 IST" duration-ms="2962" status="PASS">
+    <test started-at="2024-04-08T18:00:07 IST" name="ChromeTest" finished-at="2024-04-08T18:00:52 IST" duration-ms="44809">
+      <class name="test.ThankYouPageTest">
+        <test-method is-config="true" signature="OpenApplication(java.lang.String)[pri:0, instance:test.ThankYouPageTest@78691363]" started-at="2024-04-08T18:00:07 IST" name="OpenApplication" finished-at="2024-04-08T18:00:19 IST" duration-ms="11817" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,60 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApplication -->
-        <test-method signature="verifySwagLabLoginFunctionality()[pri:0, instance:test.LoginTest@55a147cc]" started-at="2024-04-05T20:00:36 IST" name="verifySwagLabLoginFunctionality" finished-at="2024-04-05T20:00:36 IST" duration-ms="65" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Keys to send should be a not null CharSequence]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
-at pom.SwagLabLoginPage.enterUserName(SwagLabLoginPage.java:19)
-at test.BaseTest.loginSwagLab(BaseTest.java:18)
-at test.LoginTest.verifySwagLabLoginFunctionality(LoginTest.java:28)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method signature="clickOnBackHomeButtonFunctionality()[pri:0, instance:test.ThankYouPageTest@78691363]" started-at="2024-04-08T18:00:19 IST" name="clickOnBackHomeButtonFunctionality" finished-at="2024-04-08T18:00:23 IST" duration-ms="4198" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySwagLabLoginFunctionality -->
-      </class> <!-- test.LoginTest -->
-      <class name="test.CartTest">
-        <test-method is-config="true" signature="OpenApplication(java.lang.String)[pri:0, instance:test.CartTest@75d3a5e0]" started-at="2024-04-05T20:00:36 IST" name="OpenApplication" finished-at="2024-04-05T20:00:38 IST" duration-ms="2003" status="PASS">
+        </test-method> <!-- clickOnBackHomeButtonFunctionality -->
+        <test-method is-config="true" signature="OpenApplication(java.lang.String)[pri:0, instance:test.ThankYouPageTest@78691363]" started-at="2024-04-08T18:00:23 IST" name="OpenApplication" finished-at="2024-04-08T18:00:29 IST" duration-ms="5865" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -82,11 +33,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApplication -->
-        <test-method signature="addSingleProductToCart()[pri:0, instance:test.CartTest@75d3a5e0]" started-at="2024-04-05T20:00:38 IST" name="addSingleProductToCart" finished-at="2024-04-05T20:00:39 IST" duration-ms="1028" status="PASS">
+        <test-method signature="verifyThankYouPageMessageFunctionality()[pri:0, instance:test.ThankYouPageTest@78691363]" started-at="2024-04-08T18:00:29 IST" name="verifyThankYouPageMessageFunctionality" finished-at="2024-04-08T18:00:34 IST" duration-ms="4905" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addSingleProductToCart -->
-        <test-method is-config="true" signature="OpenApplication(java.lang.String)[pri:0, instance:test.CartTest@75d3a5e0]" started-at="2024-04-05T20:00:39 IST" name="OpenApplication" finished-at="2024-04-05T20:00:41 IST" duration-ms="2059" status="PASS">
+        </test-method> <!-- verifyThankYouPageMessageFunctionality -->
+        <test-method is-config="true" signature="OpenApplication(java.lang.String)[pri:0, instance:test.ThankYouPageTest@78691363]" started-at="2024-04-08T18:00:34 IST" name="OpenApplication" finished-at="2024-04-08T18:00:43 IST" duration-ms="9067" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -97,139 +48,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApplication -->
-        <test-method signature="verifyProductQuantityInCart()[pri:0, instance:test.CartTest@75d3a5e0]" started-at="2024-04-05T20:00:41 IST" name="verifyProductQuantityInCart" finished-at="2024-04-05T20:00:42 IST" duration-ms="847" status="PASS">
+        <test-method signature="verifytThankYouPagePlaceOrderMessage()[pri:0, instance:test.ThankYouPageTest@78691363]" started-at="2024-04-08T18:00:43 IST" name="verifytThankYouPagePlaceOrderMessage" finished-at="2024-04-08T18:00:52 IST" duration-ms="8714" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyProductQuantityInCart -->
-        <test-method is-config="true" signature="OpenApplication(java.lang.String)[pri:0, instance:test.CartTest@75d3a5e0]" started-at="2024-04-05T20:00:42 IST" name="OpenApplication" finished-at="2024-04-05T20:00:44 IST" duration-ms="1982" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OpenApplication -->
-        <test-method signature="verifyRemoveProductFromCart()[pri:0, instance:test.CartTest@75d3a5e0]" started-at="2024-04-05T20:00:44 IST" name="verifyRemoveProductFromCart" finished-at="2024-04-05T20:00:44 IST" duration-ms="972" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRemoveProductFromCart -->
-      </class> <!-- test.CartTest -->
+        </test-method> <!-- verifytThankYouPagePlaceOrderMessage -->
+      </class> <!-- test.ThankYouPageTest -->
     </test> <!-- ChromeTest -->
-    <test started-at="2024-04-05T20:00:45 IST" name="EdgeTest" finished-at="2024-04-05T20:01:10 IST" duration-ms="25171">
-      <class name="test.LoginTest">
-        <test-method is-config="true" signature="OpenApplication(java.lang.String)[pri:0, instance:test.LoginTest@268f106e]" started-at="2024-04-05T20:00:45 IST" name="OpenApplication" finished-at="2024-04-05T20:00:54 IST" duration-ms="9641" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OpenApplication -->
-        <test-method signature="verifySwagLabLoginFunctionality()[pri:0, instance:test.LoginTest@268f106e]" started-at="2024-04-05T20:00:54 IST" name="verifySwagLabLoginFunctionality" finished-at="2024-04-05T20:00:54 IST" duration-ms="20" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Keys to send should be a not null CharSequence]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy13.sendKeys(Unknown Source)
-at pom.SwagLabLoginPage.enterUserName(SwagLabLoginPage.java:19)
-at test.BaseTest.loginSwagLab(BaseTest.java:18)
-at test.LoginTest.verifySwagLabLoginFunctionality(LoginTest.java:28)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySwagLabLoginFunctionality -->
-      </class> <!-- test.LoginTest -->
-      <class name="test.CartTest">
-        <test-method is-config="true" signature="OpenApplication(java.lang.String)[pri:0, instance:test.CartTest@6e9a5ed8]" started-at="2024-04-05T20:00:54 IST" name="OpenApplication" finished-at="2024-04-05T20:00:58 IST" duration-ms="3791" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OpenApplication -->
-        <test-method signature="addSingleProductToCart()[pri:0, instance:test.CartTest@6e9a5ed8]" started-at="2024-04-05T20:00:58 IST" name="addSingleProductToCart" finished-at="2024-04-05T20:00:59 IST" duration-ms="1039" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addSingleProductToCart -->
-        <test-method is-config="true" signature="OpenApplication(java.lang.String)[pri:0, instance:test.CartTest@6e9a5ed8]" started-at="2024-04-05T20:00:59 IST" name="OpenApplication" finished-at="2024-04-05T20:01:03 IST" duration-ms="4262" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OpenApplication -->
-        <test-method signature="verifyProductQuantityInCart()[pri:0, instance:test.CartTest@6e9a5ed8]" started-at="2024-04-05T20:01:03 IST" name="verifyProductQuantityInCart" finished-at="2024-04-05T20:01:04 IST" duration-ms="858" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyProductQuantityInCart -->
-        <test-method is-config="true" signature="OpenApplication(java.lang.String)[pri:0, instance:test.CartTest@6e9a5ed8]" started-at="2024-04-05T20:01:04 IST" name="OpenApplication" finished-at="2024-04-05T20:01:08 IST" duration-ms="3998" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OpenApplication -->
-        <test-method signature="verifyRemoveProductFromCart()[pri:0, instance:test.CartTest@6e9a5ed8]" started-at="2024-04-05T20:01:08 IST" name="verifyRemoveProductFromCart" finished-at="2024-04-05T20:01:10 IST" duration-ms="1540" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyRemoveProductFromCart -->
-      </class> <!-- test.CartTest -->
-    </test> <!-- EdgeTest -->
   </suite> <!-- Suite -->
 </testng-results>

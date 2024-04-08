@@ -27,6 +27,10 @@ public class SwagLabCheckoutOverview {
 		
 	}
 	
+	public String getProductNameOnOverViewPage(int index) {
+		return productName.get(index).getText();
+	}
+	
 	public String[] getProductName(int index){
 		String[] allProductName=new String[index];
 		for (int i=0;i<productName.size();i++) {

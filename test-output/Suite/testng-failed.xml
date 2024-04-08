@@ -4,23 +4,12 @@
   <test thread-count="5" name="ChromeTest(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="test.LoginTest">
+      <class name="test.OvervriewPageTest">
         <methods>
           <include name="OpenApplication"/>
-          <include name="verifySwagLabLoginFunctionality"/>
+          <include name="overViewPageTitleTest"/>
         </methods>
-      </class> <!-- test.LoginTest -->
+      </class> <!-- test.OvervriewPageTest -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
-  <test thread-count="5" name="EdgeTest(failed)">
-    <parameter name="browser" value="Edge"/>
-    <classes>
-      <class name="test.LoginTest">
-        <methods>
-          <include name="OpenApplication"/>
-          <include name="verifySwagLabLoginFunctionality"/>
-        </methods>
-      </class> <!-- test.LoginTest -->
-    </classes>
-  </test> <!-- EdgeTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

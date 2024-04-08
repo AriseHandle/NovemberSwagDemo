@@ -7,6 +7,7 @@
         <methods>
           <include name="OpenApplication"/>
           <include name="overViewPagePriceCalculationTest"/>
+          <include name="overViewPageTitleTest"/>
         </methods>
       </class> <!-- test.OvervriewPageTest -->
     </classes>
