@@ -8,20 +8,30 @@
 	 <class name="test.CartTest"/>
 	 <class name="test.MenuTest"/>
 	 <class name="test.HomePageFeatureTest"/>
-	 <class name="test.OvervriewPageTest"/>
 	 <class name="test.SocialMediaLinkTest"/>
+	 <class name="test.OvervriewPageTest"/>
+	 <class name="test.ThankYouPageTest"/>
+	
     </classes>
-  </test> <!-- Test -->
-
- <test thread-count="5" name="EdgeTest">
+    </test> <!-- Test -->
+    
+    
+  <test thread-count="5" name="EdgeTest">
 	<parameter name="browser" value="Edge"></parameter>
     <classes>
      <class name="test.LoginTest"/>
 	 <class name="test.CartTest"/>
 	 <class name="test.MenuTest"/>
 	 <class name="test.HomePageFeatureTest"/>
-	 <class name="test.OvervriewPageTest"/>
 	 <class name="test.SocialMediaLinkTest"/>
+	 <class name="test.OvervriewPageTest"/>
+	 <class name="test.ThankYouPageTest"/>
+	 
     </classes>
+   
   </test> <!-- Test -->
+    
+  
+ 
 </suite> <!-- Suite -->
+
